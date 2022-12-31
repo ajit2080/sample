@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box {
+    
+            background: #d9dbda;
+            margin: 20px   100px;
+            border: 2px;
+          }
+         
+
+
+
+    </style>
+</head>
+<body>
+    <h2 class="box" id="box-id">
+        This is project3. user register,login and logout page
+    </h2>
+    {% if user.is_authenticated %}
+              <li class="nav-item">
+                  Hi, {{user.first_name}}
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='../logout'>
+                  logout
+                </a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="register">
+                  Register
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href='login'>
+                  login
+                </a>
+              </li>
+              {% endif %}
+
+
+</body>
+</html>
